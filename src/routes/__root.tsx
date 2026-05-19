@@ -88,6 +88,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
+      {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://unpkg.com/aos@2.3.4/dist/aos.css",
+      },
     ],
   }),
   shellComponent: RootShell,
