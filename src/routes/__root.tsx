@@ -72,14 +72,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Amna Asghar — Frontend Developer" },
-      { name: "description", content: "Portfolio of Amna Asghar, a Frontend Developer based in Narowal, Pakistan, crafting beautiful, responsive, and interactive web experiences." },
-      { name: "author", content: "Amna Asghar" },
-      { property: "og:title", content: "Amna Asghar — Frontend Developer" },
-      { property: "og:description", content: "Beautiful, responsive, and interactive web experiences crafted with clean code and creative design." },
+      { title: "Portfolio" },
+      { name: "description", content: "A single-page frontend portfolio for Amna Asghar, showcasing her skills as a Frontend Developer." },
+      { name: "author", content: "Lovable" },
+      { property: "og:title", content: "Portfolio" },
+      { property: "og:description", content: "A single-page frontend portfolio for Amna Asghar, showcasing her skills as a Frontend Developer." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Amna Asghar — Frontend Developer" },
+      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Portfolio" },
+      { name: "twitter:description", content: "A single-page frontend portfolio for Amna Asghar, showcasing her skills as a Frontend Developer." },
     ],
     links: [
       {
