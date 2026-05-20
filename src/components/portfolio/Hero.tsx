@@ -1,4 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
+import { useState } from "react";
+import { CVModal } from "./CVModal";
 
 const BADGES = [
   { label: "HTML", icon: "devicon-html5-plain colored", pos: "top-2 left-2", delay: "0s" },
@@ -9,6 +11,7 @@ const BADGES = [
 
 export function Hero() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const [cvOpen, setCvOpen] = useState(false);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-24 pb-16">
@@ -46,6 +49,12 @@ export function Hero() {
             <button onClick={() => scrollTo("contact")} className="btn-outline-glow px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">
               <i className="fa-regular fa-envelope" /> Contact Me
             </button>
+            <button onClick={() => setCvOpen(true)} className="btn-outline-glow px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">
+              <i className="fa-regular fa-eye" /> View CV
+            </button>
+            <a href="/Amna_Asghar_CV.pdf" download="Amna_Asghar_CV.pdf" className="btn-outline-glow px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">
+              <i className="fa-solid fa-download" /> Download CV
+            </a>
           </div>
         </div>
 
@@ -82,6 +91,7 @@ export function Hero() {
       >
         <i className="fa-solid fa-chevron-down text-2xl" />
       </button>
+      <CVModal open={cvOpen} onClose={() => setCvOpen(false)} />
     </section>
   );
 }

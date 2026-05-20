@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { SectionTitle } from "./SectionTitle";
+import { CVModal } from "./CVModal";
 
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   const [n, setN] = useState(0);
@@ -39,6 +40,7 @@ const FUN = [
 ];
 
 export function About() {
+  const [cvOpen, setCvOpen] = useState(false);
   return (
     <section id="about" className="relative py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -58,12 +60,21 @@ export function About() {
                 </span>
               ))}
             </div>
-            <a
-              href="#"
-              className="mt-8 inline-flex items-center gap-2 btn-primary-glow px-5 py-3 rounded-lg font-semibold"
-            >
-              <i className="fa-solid fa-download" /> Download CV
-            </a>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <button
+                onClick={() => setCvOpen(true)}
+                className="inline-flex items-center gap-2 btn-primary-glow px-5 py-3 rounded-lg font-semibold"
+              >
+                <i className="fa-regular fa-eye" /> View CV
+              </button>
+              <a
+                href="/Amna_Asghar_CV.pdf"
+                download="Amna_Asghar_CV.pdf"
+                className="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-lg font-semibold"
+              >
+                <i className="fa-solid fa-download" /> Download CV
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4" data-aos="fade-left">
@@ -79,6 +90,7 @@ export function About() {
           </div>
         </div>
       </div>
+      <CVModal open={cvOpen} onClose={() => setCvOpen(false)} />
     </section>
   );
 }
