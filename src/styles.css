@@ -164,11 +164,15 @@
     color: var(--text-primary);
     font-family: "Inter", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    overflow: hidden; 
+    min-height: 100vh;
   }
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden; 
+    overflow-y: scroll;
   }
 
   ::selection {

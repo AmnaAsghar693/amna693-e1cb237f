@@ -10,11 +10,12 @@ const PROJECTS = [
     category: "Web App",
     gradient: "linear-gradient(135deg, #6e40c9, #00d4ff)",
     icon: "fa-solid fa-user-astronaut",
+
   },
   {
     title: "E-Commerce UI",
     desc: "A modern shopping interface with cart functionality and fully responsive design across all devices.",
-    tags: ["HTML", "CSS", "JS"],
+    tags: ["HTML", "CSS", "JS" , 'react'],
     category: "Landing Page",
     gradient: "linear-gradient(135deg, #ff6b6b, #f7b733)",
     icon: "fa-solid fa-bag-shopping",
