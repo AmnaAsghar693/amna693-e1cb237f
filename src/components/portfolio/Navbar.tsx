@@ -43,7 +43,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
         <button onClick={() => go("home")} className="font-mono-code text-lg tracking-tight">
           <span className="text-[var(--text-muted)]">&lt;</span>
-          <span className="text-gradient-brand font-semibold">Amna</span>
+          <span className="text-gradient-brand font-semibold">Front-End</span>
           <span className="text-[var(--text-muted)]"> /&gt;</span>
         </button>
 

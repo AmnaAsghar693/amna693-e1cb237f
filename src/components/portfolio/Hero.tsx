@@ -2,6 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 import { CVModal } from "./CVModal";
 
+
 const BADGES = [
   { label: "HTML", icon: "devicon-html5-plain colored", pos: "top-2 left-2", delay: "0s" },
   { label: "CSS", icon: "devicon-css3-plain colored", pos: "top-6 right-0", delay: "-1s" },
@@ -19,7 +20,7 @@ export function Hero() {
         <div data-aos="fade-up">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm border border-white/10 bg-white/5 backdrop-blur-md">
             <span>👋</span>
-            <span className="font-mono-code text-[var(--text-muted)]">Hello, World!</span>
+            <span className="font-mono-code text-[var(--text-muted)]">WELCOME!</span>
           </span>
           <h1 className="mt-6 text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight">
             I'm{" "}
@@ -62,10 +63,15 @@ export function Hero() {
         <div className="relative flex items-center justify-center" data-aos="zoom-in" data-aos-delay="150">
           <div className="relative w-[280px] h-[280px] sm:w-[340px] sm:h-[340px]">
             <div className="absolute -inset-2 rounded-full ring-rotate opacity-80 blur-[2px]" />
-            <div className="absolute inset-0 rounded-full p-[3px] ring-rotate">
+            <div className="absolute inset-0 rounded-full p-[3px]">
               <div className="w-full h-full rounded-full bg-[var(--bg-base)] grid place-items-center overflow-hidden relative">
                 <div className="absolute inset-0" style={{ background: "var(--gradient-brand-soft)" }} />
-                <span className="font-mono-code text-8xl sm:text-9xl font-bold text-gradient-brand relative">AA</span>
+                {/* <span className="font-mono-code text-8xl sm:text-9xl font-bold text-gradient-brand relative">AA</span> */}
+                <img
+                  src="/Hero.png"
+                  alt="Amna Asghar"
+                  className="w-full h-full object-cover rounded-full relative z-10"
+                />
               </div>
             </div>
 

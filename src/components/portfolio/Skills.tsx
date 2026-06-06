@@ -7,14 +7,14 @@ const LANGS = [
   { name: "JavaScript", icon: "devicon-javascript-plain colored", color: "#F7DF1E" },
   { name: "React", icon: "devicon-react-original colored", color: "#61DAFB" },
 ];
-
+{/* <i class="fa-brands fa-claude"></i> */}
 const TOOLS = [
   { name: "Git", icon: "devicon-git-plain colored", color: "#F05032" },
   { name: "GitHub", icon: "devicon-github-original", color: "#ffffff" },
   { name: "VS Code", icon: "devicon-vscode-plain colored", color: "#007ACC" },
   { name: "Lovable", icon: "fa-solid fa-heart", color: "#8a5cf0", isFa: true },
-  { name: "Claude AI", icon: "fa-solid fa-robot", color: "#D97706", isFa: true },
-  { name: "ChatGPT", icon: "fa-solid fa-comment-dots", color: "#10A37F", isFa: true },
+  { name: "Claude AI", icon: "fa-solid fa-brain ", color: "#D97706", isFa: true },
+  { name: "ChatGPT", icon: "fa-solid fa-comments", color: "#10A37F", isFa: true },
 ];
 
 function SkillCard({ s, i }: { s: { name: string; icon: string; color: string; isFa?: boolean }; i: number }) {

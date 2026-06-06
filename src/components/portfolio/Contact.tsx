@@ -9,7 +9,7 @@ const INFO = [
 ];
 
 const SOCIALS = [
-  { icon: "fa-brands fa-facebook-f", href: "https://facebook.com/amnarukhsar", color: "#1877F2", label: "Facebook" },
+  { icon: "fa-brands fa-github", href: "https://github.com/AmnaAsghar693", color: "#1877F2", label: "Github" },
   { icon: "fa-brands fa-linkedin-in", href: "https://linkedin.com/in/amnarukhsar", color: "#0A66C2", label: "LinkedIn" },
   { icon: "fa-brands fa-whatsapp", href: "https://wa.me/923299104922", color: "#25D366", label: "WhatsApp" },
 ];

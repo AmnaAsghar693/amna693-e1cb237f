@@ -1,6 +1,6 @@
 const LINKS = ["home", "about", "skills", "projects", "contact"];
 const SOCIALS = [
-  { icon: "fa-brands fa-facebook-f", href: "https://facebook.com/amnarukhsar" },
+  { icon: "fa-brands fa-github", href: "https://github.com/AmnaAsghar693" },
   { icon: "fa-brands fa-linkedin-in", href: "https://linkedin.com/in/amnarukhsar" },
   { icon: "fa-brands fa-whatsapp", href: "https://wa.me/923299104922" },
 ];
