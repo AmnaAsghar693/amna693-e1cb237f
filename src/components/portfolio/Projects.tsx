@@ -12,7 +12,9 @@ const PROJECTS = [
     tags: ["React", "Tailwind", "CSS"],
     category: "portfolio ",
     gradient: "linear-gradient(135deg, #6e40c9, #00d4ff)",
-    image: "/img1.png"
+    image: "/img1.png",
+    link1: 'https://github.com/AmnaAsghar693/amna693-e1cb237f',
+    link2: 'https://amnaasghar693.github.io/amna693-e1cb237f/'
   },
   {
     title: "Project 1",
@@ -22,7 +24,7 @@ const PROJECTS = [
     gradient: "linear-gradient(135deg, #ff6b6b, #f7b733)",
     image: "/p1.png",
     link1: 'https://github.com/arslanasif9t9/react-project-1st',
-    link2: 'https://amna693.lovable.app/'
+    link2: 'https://firstprojectreact.vercel.app/'
   },
   {
     title: "Restaurant project",
@@ -30,7 +32,9 @@ const PROJECTS = [
     tags: ["React", "API", "CSS"],
     category: "Web project",
     gradient: "linear-gradient(135deg, #00b09b, #00d4ff)",
-    image: "/img3.png",
+    image: "/project3.png",
+    link1:"https://github.com/AmnaAsghar693/project3",
+    link2:"https://blogsphere.mjcheezain.com/"
   },
 ];
 

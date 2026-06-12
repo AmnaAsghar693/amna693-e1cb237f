@@ -27,10 +27,30 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 const STATS = [
-  { label: "Projects Completed", value: <><Counter to={10} suffix="+" /></>, icon: "fa-solid fa-code" },
-  { label: "Technologies", value: <><Counter to={10} suffix="+" /></>, icon: "fa-solid fa-layer-group" },
-  { label: "Learning", value: "Always", icon: "fa-solid fa-brain" },
-  { label: "Location", value: "Narowal, PK", icon: "fa-solid fa-location-dot" },
+  {
+    label: "Projects Completed",
+    value: <><Counter to={10} suffix="+" /></>,
+    icon: "fa-solid fa-code",
+    image: "/project.jpg",
+  },
+  {
+    label: "Technologies",
+    value: <><Counter to={10} suffix="+" /></>,
+    icon: "fa-solid fa-layer-group",
+    image: "technology.jpg"
+  },
+  {
+    label: "Learning",
+    value: "Always",
+    icon: "fa-solid fa-brain",
+    image: "learning.jpg",
+  },
+  {
+    label: "Location",
+    value: "Narowal, PK",
+    icon: "fa-solid fa-location-dot",
+    image: "location.jpg",
+  },
 ];
 
 const FUN = [
@@ -42,52 +62,79 @@ const FUN = [
 export function About() {
   const [cvOpen, setCvOpen] = useState(false);
   return (
+  
     <section id="about" className="relative py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <SectionTitle kicker="Who I Am" title="About Me" />
+        <SectionTitle kicker="Who I Am" title="About Us" />
         <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-          <div className="glass-card p-8 lg:p-10" data-aos="fade-right">
-            <p className="text-lg text-[var(--text-primary)]/90 leading-relaxed">
-              I'm <span className="text-gradient-brand font-semibold">Amna Asghar</span>, a passionate
-              Frontend Developer from Narowal, Punjab, Pakistan. I love turning ideas into reality
-              through clean code and creative design. I specialize in building responsive, modern
-              web interfaces using the latest technologies.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              {FUN.map((f) => (
-                <span key={f.text} className="px-4 py-2 rounded-full text-sm bg-white/5 border border-white/10">
-                  <span className="mr-2">{f.emoji}</span>{f.text}
-                </span>
-              ))}
-            </div>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <button
-                onClick={() => setCvOpen(true)}
-                className="inline-flex items-center gap-2 btn-primary-glow px-5 py-3 rounded-lg font-semibold"
-              >
-                <i className="fa-regular fa-eye" /> View CV
-              </button>
-              <a
-                href="/Amna_Asghar_CV.pdf"
-                download="Amna_Asghar_CV.pdf"
-                className="inline-flex items-center gap-2 btn-outline-glow px-5 py-3 rounded-lg font-semibold"
-              >
-                <i className="fa-solid fa-download" /> Download CV
-              </a>
-            </div>
-          </div>
+          <div
+  className="glass-card p-8 lg:p-10 rounded-2xl border border-white/10 shadow-xl"
+  data-aos="fade-right"
+>
+  {/* Heading */}
+  <h1 className="text-4xl md:text-3xl font-extrabold mb-6 leading-tight">
+    <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 text-transparent bg-clip-text">
+      About Me:
+    </span>
+  </h1>
 
-          <div className="grid grid-cols-2 gap-4" data-aos="fade-left">
-            {STATS.map((s) => (
-              <div key={s.label} className="glass-card p-6 flex flex-col justify-between">
-                <i className={`${s.icon} text-2xl text-[var(--brand-cyan)]`} />
-                <div className="mt-4">
-                  <div className="text-3xl font-extrabold text-gradient-brand">{s.value}</div>
-                  <div className="text-sm text-[var(--text-muted)] mt-1">{s.label}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+  {/* Description */}
+  <p className="text-lg md:text-xl text-[var(--text-primary)]/90 leading-relaxed">
+    I'm <span className="font-semibold text-white">Amna Asghar</span>, a passionate
+    Frontend Developer from Narowal, Punjab, Pakistan. I specialize in building
+    modern, responsive, and user-friendly web interfaces using the latest technologies.
+    My focus is clean code, smooth UI, and creative digital experiences.
+  </p>
+
+  {/* Features / Highlights */}
+  <div className="mt-7 flex flex-wrap gap-3">
+    {FUN.map((f) => (
+      <span
+        key={f.text}
+        className="px-4 py-2 rounded-full text-sm bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition"
+      >
+        <span className="mr-2">{f.emoji}</span>
+        {f.text}
+      </span>
+    ))}
+  </div>
+</div>
+
+         <div className="grid grid-cols-2 gap-4" data-aos="fade-left">
+  {STATS.map((s) => (
+    <div
+      key={s.label}
+      className="relative overflow-hidden glass-card p-6 flex flex-col justify-between min-h-[180px]"
+    >
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-40"
+        style={{
+          backgroundImage: `url(${s.image})`,
+        }}
+      />
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/65" />
+
+      {/* Icon */}
+      <div className="relative z-10">
+        <i className={`${s.icon} text-3xl text-cyan-400`} />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 mt-4">
+        <div className="text-4xl font-extrabold text-white">
+          {s.value}
+        </div>
+
+        <div className="text-base text-gray-200 mt-2">
+          {s.label}
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       </div>
       <CVModal open={cvOpen} onClose={() => setCvOpen(false)} />

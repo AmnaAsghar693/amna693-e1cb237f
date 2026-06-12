@@ -68,9 +68,9 @@ export function Hero() {
                 <div className="absolute inset-0" style={{ background: "var(--gradient-brand-soft)" }} />
                 {/* <span className="font-mono-code text-8xl sm:text-9xl font-bold text-gradient-brand relative">AA</span> */}
                 <img
-                  src="/Hero.png"
+                  src="/amna.jpeg"
                   alt="Amna Asghar"
-                  className="w-full h-full object-cover rounded-full relative z-10"
+                  className="w-full h-[475px] object-cover object-bottom rounded-full relative z-10 "
                 />
               </div>
             </div>
@@ -79,7 +79,7 @@ export function Hero() {
             {BADGES.map((b) => (
               <div
                 key={b.label}
-                className={`absolute ${b.pos} glass-card px-3 py-2 flex items-center gap-2 animate-float-y text-sm`}
+                className={`absolute ${b.pos} glass-card px-3 py-2 flex items-center gap-2 animate-float-y text-sm z-50`}
                 style={{ animationDelay: b.delay }}
               >
                 <i className={`${b.icon} text-xl`} />

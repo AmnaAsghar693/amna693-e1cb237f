@@ -22,7 +22,7 @@ function Index() {
   }, []);
 
   return (
-    <div className="relative min-h-screen text-[var(--text-primary)] overflow-x-hidden">
+    <div className="relative min-h-screen text-[var(--text-primary)] overflow-hidden">
       <ScrollProgress />
       <Background />
       <div className="relative z-10">
