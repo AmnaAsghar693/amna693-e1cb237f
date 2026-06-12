@@ -1,8 +1,9 @@
-import { useEffect } from "react";
-
-const CV_URL = "/Amna_Asghar_CV.pdf";
+import { useEffect, useRef, useState } from "react";
+import { CVDocument } from "./CVDocument";
 
 export function CVModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const cvRef = useRef<HTMLDivElement>(null);
+  const [downloading, setDownloading] = useState(false);
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
@@ -16,6 +17,26 @@ export function CVModal({ open, onClose }: { open: boolean; onClose: () => void 
   }, [open, onClose]);
 
   if (!open) return null;
+
+  const handleDownload = async () => {
+    if (!cvRef.current || downloading) return;
+    setDownloading(true);
+    try {
+      const html2pdf = (await import("html2pdf.js")).default;
+      await html2pdf()
+        .set({
+          margin: 0,
+          filename: "Amna_Asghar_CV.pdf",
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: { scale: 2, useCORS: true, backgroundColor: "#ffffff" },
+          jsPDF: { unit: "px", format: [800, 1130], orientation: "portrait" },
+        })
+        .from(cvRef.current)
+        .save();
+    } finally {
+      setDownloading(false);
+    }
+  };
 
   return (
     <div
@@ -31,13 +52,14 @@ export function CVModal({ open, onClose }: { open: boolean; onClose: () => void 
             <span className="font-mono-code text-xs uppercase tracking-[0.25em] text-[var(--brand-cyan)]">
               Curriculum Vitae
             </span>
-            <a
-              href={CV_URL}
-              download="Amna_Asghar_CV.pdf"
-              className="btn-primary-glow px-4 py-2 rounded-lg font-semibold text-sm inline-flex items-center gap-2"
+            <button
+              onClick={handleDownload}
+              disabled={downloading}
+              className="btn-primary-glow px-4 py-2 rounded-lg font-semibold text-sm inline-flex items-center gap-2 disabled:opacity-60"
             >
-              <i className="fa-solid fa-download" /> Download PDF
-            </a>
+              <i className={`fa-solid ${downloading ? "fa-spinner fa-spin" : "fa-download"}`} />
+              {downloading ? "Generating..." : "Download PDF"}
+            </button>
           </div>
           <button
             onClick={onClose}
@@ -47,12 +69,8 @@ export function CVModal({ open, onClose }: { open: boolean; onClose: () => void 
             <i className="fa-solid fa-xmark text-lg" />
           </button>
         </div>
-        <div className="flex-1 bg-white">
-          <iframe
-            title="Amna Asghar CV"
-            src={`${CV_URL}#view=FitH`}
-            className="w-full h-full"
-          />
+        <div className="flex-1 overflow-auto bg-slate-200 p-6">
+          <CVDocument ref={cvRef} />
         </div>
       </div>
     </div>

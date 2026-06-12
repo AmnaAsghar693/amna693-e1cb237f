@@ -53,9 +53,6 @@ export function Hero() {
             <button onClick={() => setCvOpen(true)} className="btn-outline-glow px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">
               <i className="fa-regular fa-eye" /> View CV
             </button>
-            <a href="/Amna_Asghar_CV.pdf" download="Amna_Asghar_CV.pdf" className="btn-outline-glow px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">
-              <i className="fa-solid fa-download" /> Download CV
-            </a>
           </div>
         </div>
 
