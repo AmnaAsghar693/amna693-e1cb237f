@@ -27,9 +27,9 @@ const PROJECTS = [
     link2: 'https://firstprojectreact.vercel.app/'
   },
   {
-    title: "Restaurant project",
+    title: "BlogSphere",
     desc: "Real-time Restaurant project with a beautiful UI, animated icons and global location search.",
-    tags: ["React", "API", "CSS"],
+    tags: ["HTML", "CSS", "JAVASCRIPT"],
     category: "Web project",
     gradient: "linear-gradient(135deg, #00b09b, #00d4ff)",
     image: "/project3.png",

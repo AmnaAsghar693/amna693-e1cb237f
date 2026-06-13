@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { CVDocument } from "./CVDocument";
 
+
 export function CVModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const cvRef = useRef<HTMLDivElement>(null);
   const [downloading, setDownloading] = useState(false);
