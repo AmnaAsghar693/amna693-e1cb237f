@@ -49,7 +49,7 @@ export const CVDocument = forwardRef<HTMLDivElement>((_, ref) => {
           <Section title="Education" accent="#06b6d4">
             <div style={{ marginBottom: 14 }}>
               <p style={{ fontWeight: 700, fontSize: 14, margin: 0 }}>BS Computer Science</p>
-              <p style={{ fontSize: 12, color: "#6b7280", margin: "2px 0" }}>University of Narowal</p>
+              <p style={{ fontSize: 12, color: "#6b7280", margin: "2px 0" }}>Riphah International University</p>
               <p style={{ fontSize: 12, color: "#6b7280", margin: 0 }}>2022 — Present</p>
             </div>
             <div>
@@ -91,7 +91,7 @@ export const CVDocument = forwardRef<HTMLDivElement>((_, ref) => {
             <Job
               role="Freelance Frontend Developer"
               org="Self-Employed"
-              date="2023 — Present"
+              date="2024 — Present"
               bullets={[
                 "Built 10+ responsive websites and landing pages using React and Tailwind CSS.",
                 "Collaborated with clients to translate designs into pixel-perfect interfaces.",
@@ -100,8 +100,8 @@ export const CVDocument = forwardRef<HTMLDivElement>((_, ref) => {
             />
             <Job
               role="Frontend Developer Intern"
-              org="Remote"
-              date="2023"
+              org="Mazain Solution"
+              date="2025"
               bullets={[
                 "Developed reusable UI components for production apps.",
                 "Worked with REST APIs and integrated dynamic data into UIs.",
