@@ -93,9 +93,9 @@ export const CVDocument = forwardRef<HTMLDivElement>((_, ref) => {
               org="Self-Employed"
               date="2024 — Present"
               bullets={[
-                "Built 10+ responsive websites and landing pages using React and Tailwind CSS.",
-                "Collaborated with clients to translate designs into pixel-perfect interfaces.",
-                "Optimized performance and accessibility across modern browsers.",
+                "• Built responsive Interfaces for corporate clients using React, Tailwind, and modern JS.",
+                "• Optimized web performance and SEO, resulting in improved user engagement.",
+                "• Collaborated on UI/UX design with focus on accessibility and clean code.",
               ]}
             />
             <Job
@@ -103,8 +103,11 @@ export const CVDocument = forwardRef<HTMLDivElement>((_, ref) => {
               org="Mazain Solution"
               date="2025"
               bullets={[
-                "Developed reusable UI components for production apps.",
-                "Worked with REST APIs and integrated dynamic data into UIs.",
+                "• Delivered 10+ custom web solutions for local clients using HTML5, CSS3, JavaScript, and PHP.",
+                "• Developed complex algorithmic systems in C++ utilizing advanced DSA to solve technical challenges.",
+                "• Managed a digital business venture, mastering the intersection of technology and digital marketing.",
+                "• Implemented responsive design principles ensuring seamless experiences across mobile and desktop.",
+
               ]}
             />
           </Section>

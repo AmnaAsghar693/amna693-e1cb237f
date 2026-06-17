@@ -14,7 +14,7 @@ const PROJECTS = [
     gradient: "linear-gradient(135deg, #6e40c9, #00d4ff)",
     image: "/img1.png",
     link1: 'https://github.com/AmnaAsghar693/amna693-e1cb237f',
-    link2: 'https://amnaasghar693.github.io/amna693-e1cb237f/'
+    link2: 'https://amna693.lovable.app'
   },
   {
     title: "Project 1",
