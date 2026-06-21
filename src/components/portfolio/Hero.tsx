@@ -67,7 +67,7 @@ export function Hero() {
                 <img
                   src="/amna.jpeg"
                   alt="Amna Asghar"
-                  className="w-full h-[475px] object-cover object-bottom rounded-full relative z-10 "
+                  className="w-full h-[421px] md:h-[502px] lg:h[522px] object-cover object-bottom rounded-full relative z-10 "
                 />
               </div>
             </div>
